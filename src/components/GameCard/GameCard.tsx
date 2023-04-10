@@ -11,7 +11,12 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card borderRadius={10} overflow={'hidden'} height='350px'>
+    <Card 
+      borderRadius={10}
+      overflow={'hidden'}
+      minHeight='380px'
+      maxHeight='fit-content'
+    >
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack 
