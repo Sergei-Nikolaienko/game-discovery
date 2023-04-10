@@ -5,7 +5,7 @@ import { Image, ImageProps } from '@chakra-ui/react';
 
 interface Props {
   rating: number;
-}
+};
 
 const Emoji = ({ rating }: Props) => {
   if (rating < 3) return null;
@@ -19,6 +19,6 @@ const Emoji = ({ rating }: Props) => {
   return (
     <Image {...emojiMap[rating]} />
   )
-}
+};
 
-export default Emoji
+export default Emoji;

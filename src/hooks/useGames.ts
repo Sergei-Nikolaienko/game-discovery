@@ -5,7 +5,7 @@ export interface Platform {
   id: number;
   name: string;
   slug: string;
-}
+};
 
 export interface Game {
   id: number;
@@ -14,11 +14,11 @@ export interface Game {
   parent_platforms: {platform: Platform}[];
   metacritic: number;
   rating_top: number;
-}
+};
 
 const useGames = (gameQuery: GameQuery) => 
   useData<Game>('/games', {
-    params: { 
+    params: {
       genres: gameQuery.genre?.id,
       platforms: gameQuery.platform?.id,
       ordering: gameQuery.sortOrder,

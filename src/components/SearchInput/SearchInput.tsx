@@ -4,7 +4,7 @@ import { BsSearch } from 'react-icons/bs'
 
 interface Props {
   onSearch: (searchText: string) => void
-}
+};
 
 const SearchInput = ({ onSearch }: Props) => {
   const ref = useRef<HTMLInputElement>(null);
@@ -25,6 +25,6 @@ const SearchInput = ({ onSearch }: Props) => {
       </InputGroup>
     </form>
   )
-}
+};
 
-export default SearchInput
+export default SearchInput;

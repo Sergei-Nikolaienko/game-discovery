@@ -1,6 +1,11 @@
-import React from 'react'
 import { IconType } from 'react-icons/lib/esm/iconBase';
-import { FaWindows, FaPlaystation, FaXbox, FaApple, FaLinux, FaAndroid } from 'react-icons/fa';
+import { 
+  FaWindows,
+  FaPlaystation,
+  FaXbox,
+  FaApple,
+  FaLinux,
+  FaAndroid } from 'react-icons/fa';
 import { MdPhoneIphone } from 'react-icons/md';
 import { SiNintendo } from 'react-icons/si';
 import { BsGlobe } from 'react-icons/bs';
@@ -9,7 +14,7 @@ import { HStack, Icon, Text } from '@chakra-ui/react';
 
 interface Props {
   platforms: Platform[];
-}
+};
 
 const PlatformIconList = ({ platforms }: Props) => {
   const iconMap: { [key: string]: IconType } = {
@@ -31,6 +36,6 @@ const PlatformIconList = ({ platforms }: Props) => {
       ))}
     </HStack>
   )
-}
+};
 
-export default PlatformIconList
+export default PlatformIconList;

@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 
 interface Props {
   children: ReactNode;
-}
+};
 
 const GameCardContainer = ({ children }: Props) => {
   return (
@@ -14,6 +14,6 @@ const GameCardContainer = ({ children }: Props) => {
       {children}
     </Box>
   )
-}
+};
 
-export default GameCardContainer
+export default GameCardContainer;

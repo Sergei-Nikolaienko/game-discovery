@@ -1,4 +1,3 @@
-import React from 'react'
 import { Badge } from '@chakra-ui/react';
 
 interface Props {
@@ -17,6 +16,6 @@ const CriticScore = ({ score }: Props) => {
       {score}
     </Badge>
   )
-}
+};
 
-export default CriticScore
+export default CriticScore;

@@ -3,7 +3,7 @@ import { GameQuery } from '../../App'
 
 interface Props {
   gameQuery: GameQuery;
-}
+};
 
 const GameHeading = ({ gameQuery }: Props) => {
   const heading = `${gameQuery.platform?.name || ''} ${gameQuery.genre?.name || ''} Games`;
@@ -15,4 +15,4 @@ const GameHeading = ({ gameQuery }: Props) => {
   )
 }
 
-export default GameHeading
+export default GameHeading;

@@ -6,7 +6,7 @@ import { AxiosRequestConfig, CanceledError } from "axios";
 interface FetchResponse<T> {
   count: number;
   results: T[];
-}
+};
 
 const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, dependencies?: any[]) => {
   const [data, setData] = useState<T[]>([]);
@@ -29,9 +29,9 @@ const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, depend
           setError(err.message);
           setLoading(false);
         });
-      
-    return () => controller.abort();
-  }, dependencies ? [...dependencies] : []);
+      return () => controller.abort();
+    },dependencies ? [...dependencies] : []
+  );
 
   return { data, error, isLoading };
 };

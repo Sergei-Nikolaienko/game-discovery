@@ -4,7 +4,7 @@ import { BsChevronDown } from 'react-icons/bs'
 interface Props {
   onSelectSortOrder: (sortOrder: string) => void;
   sortOrder: string;
-}
+};
 
 const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
   const sortOrders = [
@@ -16,7 +16,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
     {value: '-rating', label: 'Average rating'},
   ];
 
-  const currentSortOrder = sortOrders.find(order => order.value === sortOrder)
+  const currentSortOrder = sortOrders.find(order => order.value === sortOrder);
 
   return (
     <Menu>
@@ -39,6 +39,6 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
       </MenuList>
     </Menu>
   )
-}
+};
 
-export default SortSelector
+export default SortSelector;
