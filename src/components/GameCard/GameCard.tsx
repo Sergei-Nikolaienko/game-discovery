@@ -10,8 +10,8 @@ interface Props {
 };
 
 const GameCard = ({ game }: Props) => {
-  const cardBg = useColorModeValue('#9DECF9', '#2D3748');
-  const cardBr = useColorModeValue('1px solid grey', 'none');
+  const cardBg = useColorModeValue('linear-gradient(to right, #C9EEFF, #97DEFF)', '#2D3748');
+  const cardBr = useColorModeValue('1px solid #4A5568', 'none');
 
   return (
     <Card 
