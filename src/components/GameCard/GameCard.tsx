@@ -1,5 +1,5 @@
 import { Game } from '../../hooks/useGames';
-import { Box, Card, CardBody, HStack, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Card, CardBody, HStack, Heading, Image, useColorModeValue } from '@chakra-ui/react';
 import PlatformIconList from '../PlatformIconList';
 import CriticScore from '../CriticScore';
 import Emoji from '../Emoji';
@@ -10,12 +10,17 @@ interface Props {
 };
 
 const GameCard = ({ game }: Props) => {
+  const cardBg = useColorModeValue('#9DECF9', '#2D3748');
+  const cardBr = useColorModeValue('1px solid grey', 'none');
+
   return (
     <Card 
       borderRadius={10}
       overflow={'hidden'}
       minHeight='380px'
       maxHeight='fit-content'
+      bg={cardBg}
+      border={cardBr}
     >
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
