@@ -1,4 +1,4 @@
-import { HStack, Image, Link } from '@chakra-ui/react';
+import { HStack, Image, Link, useColorModeValue } from '@chakra-ui/react';
 import logo from '../../assets/Logo/logo.webp';
 import ColorModeSwitch from '../ColorModeSwitch';
 import SearchInput from '../SearchInput';
@@ -8,8 +8,17 @@ interface Props {
 };
 
 const Navbar = ({ onSearch }: Props) => {
+  const navBG = useColorModeValue('linear-gradient(to right, #C9EEFF, #97DEFF)', 'none');
+  const navBD = useColorModeValue('1px solid #4A5568', 'none');
+
   return (
-    <HStack gap={{lg: '110px'}} padding='2em'>
+    <HStack 
+      bg={navBG} 
+      borderBottom={navBD} 
+      gap={{lg: '110px'}} 
+      padding='1em 2em'
+      borderRadius='0 0 2em 2em'
+    >
       <Link href='/'>
         <Image 
           src={logo}

@@ -1,5 +1,5 @@
 import useGenres, { Genres } from '../../hooks/useGenres'
-import { Button, HStack, Heading, Image, List, ListItem, Spinner, Text, useColorModeValue } from '@chakra-ui/react';
+import { Button, HStack, Heading, Image, List, ListItem, Spinner, useColorModeValue } from '@chakra-ui/react';
 import getCroppedImageUrl from '../../services/image-url';
 
 interface Props {
@@ -11,13 +11,12 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
   const fontColor = useColorModeValue('black', 'white');
 
-
   if (error) return null;
   if (isLoading) return <Spinner />;
 
   return (
     <>
-      <Heading marginBottom={10} fontSize='2xl'>Genres</Heading>
+      <Heading paddingTop={3} marginBottom={10} fontSize='2xl'>Genres</Heading>
       <List>
         {data.map((genre) => (
           <ListItem key={genre.id}>

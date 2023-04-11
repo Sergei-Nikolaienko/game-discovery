@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Flex, Grid, GridItem, Show, Hide } from '@chakra-ui/react';
+import { Box, Flex, Grid, GridItem, Show, Hide, useColorModeValue } from '@chakra-ui/react';
 import Navbar from './components/Navbar';
 import GameGrid from './components/GameGrid';
 import GenreList from './components/GenreList';
@@ -18,7 +18,7 @@ export interface GameQuery {
 };
 
 function App() {
-  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery)
+  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
   return (
     <Grid 
@@ -37,7 +37,11 @@ function App() {
         />
       </GridItem>
       <Show above='lg'>
-        <GridItem area='aside' paddingX='2.5em'>
+        <GridItem 
+          area='aside'
+          paddingX='2.5em'
+          height='max-content'
+        >
           <GenreList
             selectedGenre={gameQuery.genre}
             onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}

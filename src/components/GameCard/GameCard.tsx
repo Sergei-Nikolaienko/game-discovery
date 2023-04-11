@@ -11,7 +11,7 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   const cardBg = useColorModeValue('linear-gradient(to right, #C9EEFF, #97DEFF)', '#2D3748');
-  const cardBr = useColorModeValue('1px solid #4A5568', 'none');
+  const cardBd = useColorModeValue('1px solid #4A5568', 'none');
 
   return (
     <Card 
@@ -20,7 +20,7 @@ const GameCard = ({ game }: Props) => {
       minHeight='380px'
       maxHeight='fit-content'
       bg={cardBg}
-      border={cardBr}
+      border={cardBd}
     >
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
