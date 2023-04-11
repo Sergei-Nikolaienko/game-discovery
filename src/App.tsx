@@ -48,7 +48,7 @@ function App() {
         <Box 
           paddingLeft={2.5}
           marginBottom={5}
-          textAlign={{base: 'center', md: 'center', lg: 'left'}}
+          textAlign={{base: 'center', lg: 'left'}}
         >
           <GameHeading
             gameQuery={gameQuery}
@@ -58,6 +58,7 @@ function App() {
           paddingLeft={2.5}
           marginBottom={5}
           gap={5}
+          justifyContent={{base: 'center', lg: 'left'}}
         >
           <PlatformSelector
             selectedPlatform={gameQuery.platform}
