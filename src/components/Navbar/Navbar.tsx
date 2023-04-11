@@ -9,7 +9,7 @@ interface Props {
 
 const Navbar = ({ onSearch }: Props) => {
   return (
-    <HStack padding='2em'>
+    <HStack gap={{lg: '110px'}} padding='2em'>
       <Link href='/'>
         <Image src={logo} boxSize='60px' objectFit='cover' />
       </Link>

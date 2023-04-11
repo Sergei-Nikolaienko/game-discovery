@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Flex, Grid, GridItem, Show } from '@chakra-ui/react';
+import { Box, Flex, Grid, GridItem, Show, Hide } from '@chakra-ui/react';
 import Navbar from './components/Navbar';
 import GameGrid from './components/GameGrid';
 import GenreList from './components/GenreList';
@@ -8,6 +8,7 @@ import PlatformSelector from './components/PlatformSelector';
 import { Platform } from './hooks/useGames';
 import SortSelector from './components/SortSelector';
 import GameHeading from './components/GameHeading';
+import GenreSelector from './components/GenreSelector';
 
 export interface GameQuery {
   genre: Genres | null;
@@ -31,7 +32,7 @@ function App() {
       }}
     >
       <GridItem area='nav'>
-        <Navbar 
+        <Navbar
           onSearch={(searchText) => setGameQuery({...gameQuery, searchText})} 
         />
       </GridItem>
@@ -47,6 +48,7 @@ function App() {
         <Box 
           paddingLeft={2.5}
           marginBottom={5}
+          textAlign={{base: 'center', md: 'center', lg: 'left'}}
         >
           <GameHeading
             gameQuery={gameQuery}
@@ -55,17 +57,22 @@ function App() {
         <Flex
           paddingLeft={2.5}
           marginBottom={5}
+          gap={5}
         >
-          <Box marginRight={5}>
-            <PlatformSelector
-              selectedPlatform={gameQuery.platform}
-              onSelectPlatform={(platform) => setGameQuery({...gameQuery, platform})}
-            />
-          </Box>
+          <PlatformSelector
+            selectedPlatform={gameQuery.platform}
+            onSelectPlatform={(platform) => setGameQuery({...gameQuery, platform})}
+          />
           <SortSelector 
             sortOrder={gameQuery.sortOrder}
             onSelectSortOrder={(sortOrder) => setGameQuery({ ...gameQuery, sortOrder })}
           />
+          <Hide above='lg'>
+            <GenreSelector
+              selectedGenre={gameQuery.genre}
+              onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
+            />
+          </Hide>
         </Flex>
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
