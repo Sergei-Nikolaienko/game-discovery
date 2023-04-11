@@ -31,9 +31,12 @@ function App() {
         lg: '200px 1fr'
       }}
     >
-      <GridItem area='nav'>
+      <GridItem 
+        area='nav' 
+        marginBottom={{base: '1em', md: '1.5em', lg: '2em'}}
+      >
         <Navbar
-          onSearch={(searchText) => setGameQuery({...gameQuery, searchText})} 
+          onSearch={(searchText) => setGameQuery({...gameQuery, searchText})}
         />
       </GridItem>
       <Show above='lg'>

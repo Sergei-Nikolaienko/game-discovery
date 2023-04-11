@@ -17,7 +17,7 @@ const Navbar = ({ onSearch }: Props) => {
       borderBottom={navBD} 
       gap={{lg: '110px'}} 
       padding='1em 2em'
-      borderRadius='0 0 2em 2em'
+      borderRadius={{base: '0', lg: '0 0 2em 2em'}}
     >
       <Link href='/'>
         <Image 
