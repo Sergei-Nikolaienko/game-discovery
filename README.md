@@ -1,5 +1,5 @@
 # game-discovery-app
-A project built for purpose of training in React and Typescript as well as fetching data from a remote server. 
+A project built in React and Typescript for fetching data from an API. 
 
 Technologies used: React, Typescript, Axios, Chakra UI, React Icons
 
