@@ -17,10 +17,10 @@ React Icons: A set of customizable icons for React
 
 # Getting Started
 ## To run the app locally, follow these steps:
-Clone the repository to your local machine
-Navigate to the project directory
-Install dependencies using npm install
-Start the development server using npm start
+Clone the repository to your local machine. 
+Navigate to the project directory. 
+Install dependencies using npm install. 
+Start the development server using npm start. 
 
 # Contributing
 ## Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
