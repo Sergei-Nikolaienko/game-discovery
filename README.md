@@ -4,8 +4,9 @@ This project is a web application that helps users discover new games based on t
 
 
 # Features
-Search for games by title or genre
-View a list of popular games, upcoming games, and top-rated games. Responsive design that works on desktop and mobile devices
+- Search for games by title or genre.
+- View a list of popular games, upcoming games, and top-rated games. 
+- Responsive design that works on desktop and mobile devices.
 
 # Technologies Used
 React: A JavaScript library for building user interfaces. Typescript: A statically-typed superset of JavaScript that adds additional features to the language. Axios: A promise-based HTTP client for making API requests. Chakra UI: A set of accessible and customizable UI components for React. React Icons: A set of customizable icons for React
